@@ -90,7 +90,27 @@
             align-items: center;
         }
 
-        .logo {
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .logo-image {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+            background-color: #008B8B;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .logo-text {
             font-family: 'Lora', serif;
             font-size: 1.4rem;
             font-weight: 600;
@@ -208,23 +228,8 @@
 
         .about-content {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-
-        .about-image {
-            text-align: center;
-        }
-
-        .profile-img {
-            width: 300px;
-            height: 300px;
-            border-radius: 50%;
-            object-fit: cover;
-            box-shadow: 0 10px 40px rgba(0, 139, 139, 0.15);
-            display: inline-block;
-            border: 3px solid #f0f0f0;
+            grid-template-columns: 1fr;
+            gap: 3rem;
         }
 
         .about-text h2 {
@@ -444,16 +449,6 @@
                 height: 280px;
             }
 
-            .about-content {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-
-            .profile-img {
-                width: 250px;
-                height: 250px;
-            }
-
             .portfolio-grid {
                 grid-template-columns: 1fr;
             }
@@ -473,6 +468,10 @@
 
             nav {
                 font-size: 0.85rem;
+            }
+
+            .logo-text {
+                display: none;
             }
         }
 
@@ -510,9 +509,8 @@
                 height: 220px;
             }
 
-            .profile-img {
-                width: 200px;
-                height: 200px;
+            .logo-text {
+                display: none;
             }
         }
     </style>
@@ -522,7 +520,10 @@
     <header>
         <div class="container">
             <div class="header-content">
-                <div class="logo">Kiranmai M</div>
+                <div class="logo-container">
+                    <div class="logo-image">K</div>
+                    <div class="logo-text">Kiranmai M</div>
+                </div>
                 <nav>
                     <ul>
                         <li><a href="#hero">Home</a></li>
@@ -560,10 +561,6 @@
     <section id="about">
         <div class="container">
             <div class="about-content">
-                <div class="about-image">
-                    <img src="profile.jpg" alt="Kiranmai Reddy" class="profile-img">
-                </div>
-
                 <div class="about-text">
                     <h2>About Me</h2>
                     <p>
