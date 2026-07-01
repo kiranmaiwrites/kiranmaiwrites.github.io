@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kiran Mai - Health & Wellness Writing</title>
+    <title>Kiranmai M - Health & Medical Content Writer</title>
+    <meta name="description" content="Evidence-based health, medical, and wellness content writing by Kiranmai Reddy. Medical graduate specializing in complex health topics.">
     <style>
         * {
             margin: 0;
@@ -20,9 +21,9 @@
 
         /* Header & Navigation */
         header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #008B8B 0%, #20B2AA 100%);
             color: white;
-            padding: 2rem 0;
+            padding: 1.5rem 0;
             position: sticky;
             top: 0;
             z-index: 100;
@@ -39,19 +40,46 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 1rem;
         }
 
         .logo {
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.2;
+        }
+
+        .logo-text .brand {
+            font-size: 1.8rem;
+            font-weight: 900;
+            letter-spacing: -0.5px;
+        }
+
+        .logo-text .tagline {
+            font-size: 0.7rem;
+            opacity: 0.9;
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
         }
 
         nav a {
             color: white;
             text-decoration: none;
-            margin-left: 2rem;
             transition: opacity 0.3s;
+            font-weight: 500;
         }
 
         nav a:hover {
@@ -60,7 +88,7 @@
 
         .hero {
             text-align: center;
-            padding: 2rem 0;
+            padding: 3rem 0;
         }
 
         .hero h1 {
@@ -84,117 +112,192 @@
 
         h2 {
             font-size: 2rem;
-            color: #667eea;
+            color: #008B8B;
             margin-bottom: 2rem;
-            border-bottom: 3px solid #667eea;
+            border-bottom: 3px solid #20B2AA;
             padding-bottom: 0.5rem;
         }
 
-        /* Articles Grid */
-        .articles-grid {
+        /* About Section */
+        .about-intro {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            line-height: 1.8;
+            border-left: 5px solid #008B8B;
+        }
+
+        .about-intro h3 {
+            color: #008B8B;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .about-intro p {
+            margin-bottom: 1rem;
+            color: #555;
+        }
+
+        /* Why Work With Me Section */
+        .why-work {
+            background: linear-gradient(135deg, rgba(0, 139, 139, 0.05) 0%, rgba(32, 178, 170, 0.05) 100%);
+            padding: 2rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+        }
+
+        .why-work h3 {
+            color: #008B8B;
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .why-work ul {
+            list-style: none;
+        }
+
+        .why-work li {
+            padding: 0.75rem 0;
+            color: #555;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .why-work li:before {
+            content: "✓";
+            color: #008B8B;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        /* Portfolio/Services Grid */
+        .portfolio-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
         }
 
-        .article-card {
+        .portfolio-card {
             background: white;
             border-radius: 8px;
             overflow: hidden;
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
             transition: transform 0.3s, box-shadow 0.3s;
+            border-top: 4px solid #20B2AA;
         }
 
-        .article-card:hover {
+        .portfolio-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 4px 16px rgba(0,0,0,0.15);
         }
 
-        .article-card-image {
-            height: 200px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        .portfolio-card-image {
+            height: 150px;
+            background: linear-gradient(135deg, #008B8B 0%, #20B2AA 100%);
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
-            font-size: 3rem;
+            font-size: 2.5rem;
         }
 
-        .article-card-content {
+        .portfolio-card-content {
             padding: 1.5rem;
         }
 
-        .article-card h3 {
-            font-size: 1.3rem;
+        .portfolio-card h3 {
+            font-size: 1.2rem;
+            color: #008B8B;
             margin-bottom: 0.5rem;
-            color: #333;
         }
 
-        .article-card .category {
-            display: inline-block;
-            background-color: #667eea;
-            color: white;
-            padding: 0.25rem 0.75rem;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            margin-bottom: 0.75rem;
-        }
-
-        .article-card p {
+        .portfolio-card p {
             color: #666;
-            margin-bottom: 1rem;
-            line-height: 1.5;
+            font-size: 0.95rem;
+            line-height: 1.6;
         }
 
-        .read-more {
-            display: inline-block;
-            color: #667eea;
-            text-decoration: none;
-            font-weight: 600;
-            transition: color 0.3s;
-        }
-
-        .read-more:hover {
-            color: #764ba2;
-        }
-
-        /* About Section */
-        .about-content {
+        /* Services Section */
+        .service-item {
             background: white;
             padding: 2rem;
             border-radius: 8px;
+            margin-bottom: 1.5rem;
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            line-height: 1.8;
+            border-left: 5px solid #008B8B;
+        }
+
+        .service-item h3 {
+            color: #008B8B;
+            font-size: 1.2rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .service-item p {
+            color: #666;
+            line-height: 1.6;
         }
 
         /* Contact Section */
         .contact-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
         }
 
         .contact-item {
             background: white;
-            padding: 1.5rem;
+            padding: 2rem;
             border-radius: 8px;
             text-align: center;
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-top: 4px solid #20B2AA;
         }
 
         .contact-item h3 {
-            color: #667eea;
-            margin-bottom: 0.5rem;
+            color: #008B8B;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
         }
 
         .contact-item a {
-            color: #667eea;
+            color: #008B8B;
             text-decoration: none;
             font-weight: 600;
+            font-size: 1rem;
+            transition: color 0.3s;
         }
 
         .contact-item a:hover {
+            color: #20B2AA;
             text-decoration: underline;
+        }
+
+        .contact-item p {
+            color: #999;
+            font-size: 0.9rem;
+            margin-bottom: 0.75rem;
+        }
+
+        /* CTA Button */
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #008B8B 0%, #20B2AA 100%);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin-top: 1rem;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 139, 139, 0.3);
         }
 
         /* Footer */
@@ -214,12 +317,13 @@
         @media (max-width: 768px) {
             nav {
                 flex-direction: column;
-                gap: 1rem;
+                gap: 1.5rem;
             }
 
-            nav a {
-                margin-left: 1rem;
-                margin-bottom: 0.5rem;
+            nav ul {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
             }
 
             .hero h1 {
@@ -233,6 +337,14 @@
             h2 {
                 font-size: 1.5rem;
             }
+
+            .logo-text .brand {
+                font-size: 1.3rem;
+            }
+
+            .logo-text .tagline {
+                font-size: 0.6rem;
+            }
         }
     </style>
 </head>
@@ -240,68 +352,121 @@
     <header>
         <div class="container">
             <nav>
-                <div class="logo">Kiran Mai</div>
-                <div>
-                    <a href="#about">About</a>
-                    <a href="#articles">Articles</a>
-                    <a href="#contact">Contact</a>
+                <div class="logo">
+                    <div class="logo-text">
+                        <span class="brand">Kiranmai Writes</span>
+                        <span class="tagline">Health & Medical Content</span>
+                    </div>
                 </div>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
             </nav>
-            <div class="hero">
-                <h1>Health & Wellness Writing</h1>
-                <p>Exploring the intersection of medicine, wellness, and human health</p>
+            <div class="hero" id="home">
+                <h1>Kiranmai M</h1>
+                <p>Health & Medical Content Writer</p>
+                <p style="font-size: 1rem; opacity: 0.9; margin-top: 0.5rem;">
+                    Evidence-based health, medical, and wellness content that educates readers, builds trust, and makes complex topics easy to understand
+                </p>
             </div>
         </div>
     </header>
 
     <main class="container">
-        <!-- Featured Articles Section -->
-        <section id="articles">
-            <h2>Featured Articles</h2>
-            <div class="articles-grid">
-                <article class="article-card">
-                    <div class="article-card-image">📋</div>
-                    <div class="article-card-content">
-                        <span class="category">Health</span>
-                        <h3>Your First Article Title</h3>
-                        <p>A brief description of your article goes here. Share the main takeaway or topic that readers will learn about.</p>
-                        <a href="#" class="read-more">Read Article →</a>
-                    </div>
-                </article>
-
-                <article class="article-card">
-                    <div class="article-card-image">💊</div>
-                    <div class="article-card-content">
-                        <span class="category">Wellness</span>
-                        <h3>Another Article Title</h3>
-                        <p>Share insights about wellness practices, prevention strategies, or health trends relevant to your expertise.</p>
-                        <a href="#" class="read-more">Read Article →</a>
-                    </div>
-                </article>
-
-                <article class="article-card">
-                    <div class="article-card-image">🏥</div>
-                    <div class="article-card-content">
-                        <span class="category">Medical</span>
-                        <h3>Medical Article Title</h3>
-                        <p>Deep dive into medical topics, research findings, or healthcare insights that inform better health decisions.</p>
-                        <a href="#" class="read-more">Read Article →</a>
-                    </div>
-                </article>
-            </div>
-        </section>
-
         <!-- About Section -->
         <section id="about">
             <h2>About Me</h2>
-            <div class="about-content">
+            <div class="about-intro">
+                <h3>Kiranmai Reddy</h3>
                 <p>
-                    Welcome to my health and wellness writing portfolio. I'm passionate about translating complex medical and wellness concepts 
-                    into accessible, engaging content that empowers readers to make informed decisions about their health.
+                    I'm a health and medical content writer with a dental graduate background and a strong foundation in medical science. 
+                    I specialize in creating evidence-based, reader-friendly content that transforms complex medical topics into accessible information.
                 </p>
-                <p style="margin-top: 1rem;">
-                    With a focus on evidence-based writing, I cover topics ranging from preventive medicine and nutrition to mental wellness 
-                    and lifestyle optimization. My work bridges the gap between scientific research and practical, actionable health advice.
+                <p>
+                    With experience reviewing and summarizing complex medical records, I bring both technical accuracy and clear communication 
+                    to every piece I write. My goal is to help readers understand health topics, make informed decisions, and feel confident about their wellness.
+                </p>
+
+                <div class="why-work">
+                    <h3>Why Work With Me?</h3>
+                    <ul>
+                        <li>Dental graduate with a strong foundation in medical science</li>
+                        <li>Experience reviewing and summarizing complex medical records</li>
+                        <li>Evidence-based, reader-friendly writing</li>
+                        <li>SEO-optimized health content</li>
+                        <li>Reliable, research-driven, and detail-oriented</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio">
+            <h2>Portfolio</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-card">
+                    <div class="portfolio-card-image">📚</div>
+                    <div class="portfolio-card-content">
+                        <h3>Medical Research Articles</h3>
+                        <p>In-depth articles translating complex medical research into accessible, evidence-based content for general and professional audiences.</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-card">
+                    <div class="portfolio-card-image">💊</div>
+                    <div class="portfolio-card-content">
+                        <h3>Wellness Guides</h3>
+                        <p>Comprehensive guides on health topics, preventive medicine, nutrition, and lifestyle optimization backed by scientific research.</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-card">
+                    <div class="portfolio-card-image">🏥</div>
+                    <div class="portfolio-card-content">
+                        <h3>Medical Content Writing</h3>
+                        <p>Medical record summaries, patient education materials, and healthcare content that meets professional standards and reader expectations.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services">
+            <h2>Services</h2>
+            
+            <div class="service-item">
+                <h3>📝 Health & Wellness Articles</h3>
+                <p>
+                    SEO-optimized, evidence-based articles on health topics, nutrition, wellness trends, and disease prevention. 
+                    Perfect for blogs, health websites, and publications.
+                </p>
+            </div>
+
+            <div class="service-item">
+                <h3>📋 Medical Record Summaries & Reviews</h3>
+                <p>
+                    Expert review and summarization of complex medical records, clinical reports, and patient documentation. 
+                    Accurate, detailed, and professionally written.
+                </p>
+            </div>
+
+            <div class="service-item">
+                <h3>👥 Patient Education Content</h3>
+                <p>
+                    Clear, compassionate educational materials for patients about medical conditions, treatments, and health management. 
+                    Complex medical concepts made simple.
+                </p>
+            </div>
+
+            <div class="service-item">
+                <h3>🔬 Medical Content & Copywriting</h3>
+                <p>
+                    Healthcare industry content including medical blogs, email campaigns, website copy, and promotional materials 
+                    that combine accuracy with compelling messaging.
                 </p>
             </div>
         </section>
@@ -311,27 +476,29 @@
             <h2>Get In Touch</h2>
             <div class="contact-grid">
                 <div class="contact-item">
-                    <h3>Email</h3>
-                    <p>Have a writing opportunity?</p>
-                    <a href="mailto:your.email@example.com">your.email@example.com</a>
+                    <h3>📧 Email</h3>
+                    <p>Let's discuss your health writing project</p>
+                    <a href="mailto:kiranmaireddy960@gmail.com">kiranmaireddy960@gmail.com</a>
                 </div>
+
                 <div class="contact-item">
-                    <h3>LinkedIn</h3>
+                    <h3>💼 LinkedIn</h3>
                     <p>Connect with me professionally</p>
-                    <a href="https://linkedin.com" target="_blank">linkedin.com/in/yourprofile</a>
+                    <a href="https://linkedin.com/in/dr-kiranmai-reddy-a89359152" target="_blank">dr-kiranmai-reddy-a89359152</a>
                 </div>
+
                 <div class="contact-item">
-                    <h3>Twitter</h3>
-                    <p>Follow for health insights</p>
-                    <a href="https://twitter.com" target="_blank">@yourhandle</a>
+                    <h3>💬 Ready to Collaborate?</h3>
+                    <p>Let's create compelling health content together</p>
+                    <a href="mailto:kiranmaireddy960@gmail.com" class="cta-button">Start a Project</a>
                 </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 Kiran Mai. All rights reserved.</p>
-        <p>Health & Wellness Writing Portfolio</p>
+        <p>&copy; 2024 Kiranmai M - Health & Medical Content Writer. All rights reserved.</p>
+        <p>Delivering evidence-based, SEO-optimized health content.</p>
     </footer>
 </body>
 </html>
