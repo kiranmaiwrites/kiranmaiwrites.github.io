@@ -190,6 +190,19 @@
             align-items: center;
         }
 
+        .about-image {
+            text-align: center;
+        }
+
+        .profile-img {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 10px 40px rgba(0, 139, 139, 0.15);
+            display: inline-block;
+        }
+
         .about-text h2 {
             margin-top: 0;
         }
@@ -402,6 +415,11 @@
                 gap: 2rem;
             }
 
+            .profile-img {
+                width: 250px;
+                height: 250px;
+            }
+
             .portfolio-grid {
                 grid-template-columns: 1fr;
             }
@@ -452,6 +470,11 @@
                 padding: 0.85rem 1.8rem;
                 font-size: 0.9rem;
             }
+
+            .profile-img {
+                width: 200px;
+                height: 200px;
+            }
         }
     </style>
 </head>
@@ -491,6 +514,10 @@
     <section id="about">
         <div class="container">
             <div class="about-content">
+                <div class="about-image">
+                    <img src="profile.jpg" alt="Kiranmai Reddy" class="profile-img">
+                </div>
+
                 <div class="about-text">
                     <h2>About Me</h2>
                     <p>
@@ -501,9 +528,7 @@
                         My approach combines rigorous research with reader-focused writing. Whether you need wellness articles, 
                         medical education content, or health-focused copy, I deliver work that's both scientifically accurate and genuinely engaging.
                     </p>
-                </div>
 
-                <div>
                     <div class="about-highlight">
                         <h3>Why Work With Me?</h3>
                         <ul class="expertise-list">
