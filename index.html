@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiran Mai - Health & Wellness Writing</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fafafa;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 2rem;
+            transition: opacity 0.3s;
+        }
+
+        nav a:hover {
+            opacity: 0.8;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.95;
+        }
+
+        /* Main Content */
+        main {
+            padding: 3rem 0;
+        }
+
+        section {
+            margin-bottom: 4rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: #667eea;
+            margin-bottom: 2rem;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 0.5rem;
+        }
+
+        /* Articles Grid */
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .article-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+        }
+
+        .article-card-image {
+            height: 200px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+        }
+
+        .article-card-content {
+            padding: 1.5rem;
+        }
+
+        .article-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+
+        .article-card .category {
+            display: inline-block;
+            background-color: #667eea;
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .article-card p {
+            color: #666;
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+
+        .read-more {
+            display: inline-block;
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .read-more:hover {
+            color: #764ba2;
+        }
+
+        /* About Section */
+        .about-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            line-height: 1.8;
+        }
+
+        /* Contact Section */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .contact-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .contact-item h3 {
+            color: #667eea;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-item a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+
+        footer p {
+            margin: 0.5rem 0;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            nav a {
+                margin-left: 1rem;
+                margin-bottom: 0.5rem;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">Kiran Mai</div>
+                <div>
+                    <a href="#about">About</a>
+                    <a href="#articles">Articles</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </nav>
+            <div class="hero">
+                <h1>Health & Wellness Writing</h1>
+                <p>Exploring the intersection of medicine, wellness, and human health</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Featured Articles Section -->
+        <section id="articles">
+            <h2>Featured Articles</h2>
+            <div class="articles-grid">
+                <article class="article-card">
+                    <div class="article-card-image">📋</div>
+                    <div class="article-card-content">
+                        <span class="category">Health</span>
+                        <h3>Your First Article Title</h3>
+                        <p>A brief description of your article goes here. Share the main takeaway or topic that readers will learn about.</p>
+                        <a href="#" class="read-more">Read Article →</a>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <div class="article-card-image">💊</div>
+                    <div class="article-card-content">
+                        <span class="category">Wellness</span>
+                        <h3>Another Article Title</h3>
+                        <p>Share insights about wellness practices, prevention strategies, or health trends relevant to your expertise.</p>
+                        <a href="#" class="read-more">Read Article →</a>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <div class="article-card-image">🏥</div>
+                    <div class="article-card-content">
+                        <span class="category">Medical</span>
+                        <h3>Medical Article Title</h3>
+                        <p>Deep dive into medical topics, research findings, or healthcare insights that inform better health decisions.</p>
+                        <a href="#" class="read-more">Read Article →</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <p>
+                    Welcome to my health and wellness writing portfolio. I'm passionate about translating complex medical and wellness concepts 
+                    into accessible, engaging content that empowers readers to make informed decisions about their health.
+                </p>
+                <p style="margin-top: 1rem;">
+                    With a focus on evidence-based writing, I cover topics ranging from preventive medicine and nutrition to mental wellness 
+                    and lifestyle optimization. My work bridges the gap between scientific research and practical, actionable health advice.
+                </p>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Get In Touch</h2>
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <h3>Email</h3>
+                    <p>Have a writing opportunity?</p>
+                    <a href="mailto:your.email@example.com">your.email@example.com</a>
+                </div>
+                <div class="contact-item">
+                    <h3>LinkedIn</h3>
+                    <p>Connect with me professionally</p>
+                    <a href="https://linkedin.com" target="_blank">linkedin.com/in/yourprofile</a>
+                </div>
+                <div class="contact-item">
+                    <h3>Twitter</h3>
+                    <p>Follow for health insights</p>
+                    <a href="https://twitter.com" target="_blank">@yourhandle</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Kiran Mai. All rights reserved.</p>
+        <p>Health & Wellness Writing Portfolio</p>
+    </footer>
+</body>
+</html>
