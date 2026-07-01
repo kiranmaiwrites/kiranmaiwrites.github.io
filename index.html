@@ -130,10 +130,20 @@
         .hero {
             margin-top: 100px;
             padding: 60px 0;
-            text-align: center;
         }
 
-        .hero h1 {
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-text {
+            text-align: left;
+        }
+
+        .hero-text h1 {
             color: #2c2c2c;
             margin-bottom: 0.5rem;
         }
@@ -148,8 +158,21 @@
         .hero p {
             font-size: 1.05rem;
             color: #666;
-            max-width: 700px;
-            margin: 0 auto 2.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .hero-image {
+            text-align: center;
+        }
+
+        .hero-profile-img {
+            width: 350px;
+            height: 350px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 20px 60px rgba(0, 139, 139, 0.2);
+            display: inline-block;
+            border: 3px solid #f0f0f0;
         }
 
         .cta-button {
@@ -201,6 +224,7 @@
             object-fit: cover;
             box-shadow: 0 10px 40px rgba(0, 139, 139, 0.15);
             display: inline-block;
+            border: 3px solid #f0f0f0;
         }
 
         .about-text h2 {
@@ -402,12 +426,22 @@
                 padding: 40px 0;
             }
 
-            .hero h1 {
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .hero-text h1 {
                 font-size: 2rem;
             }
 
             .hero .tagline {
                 font-size: 1.1rem;
+            }
+
+            .hero-profile-img {
+                width: 280px;
+                height: 280px;
             }
 
             .about-content {
@@ -471,6 +505,11 @@
                 font-size: 0.9rem;
             }
 
+            .hero-profile-img {
+                width: 220px;
+                height: 220px;
+            }
+
             .profile-img {
                 width: 200px;
                 height: 200px;
@@ -500,13 +539,20 @@
     <!-- Hero Section -->
     <section class="hero" id="hero">
         <div class="container">
-            <h1>Kiranmai Reddy</h1>
-            <p class="tagline">Health & Medical Content Writer</p>
-            <p>
-                I create evidence-based health, medical, and wellness content that educates readers, 
-                builds trust, and makes complex topics easy to understand.
-            </p>
-            <a href="#contact" class="cta-button">Let's Work Together</a>
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Kiranmai Reddy</h1>
+                    <p class="tagline">Health & Medical Content Writer</p>
+                    <p>
+                        I create evidence-based health, medical, and wellness content that educates readers, 
+                        builds trust, and makes complex topics easy to understand.
+                    </p>
+                    <a href="#contact" class="cta-button">Let's Work Together</a>
+                </div>
+                <div class="hero-image">
+                    <img src="profile.jpg" alt="Kiranmai Reddy - Health & Medical Content Writer" class="hero-profile-img">
+                </div>
+            </div>
         </div>
     </section>
 
