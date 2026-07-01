@@ -7,7 +7,7 @@
     <meta name="description" content="Health & Medical Content Writer specializing in evidence-based wellness content, medical articles, and patient education.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -21,67 +21,74 @@
 
         body {
             font-family: 'Sora', sans-serif;
-            line-height: 1.7;
-            color: #2c2c2c;
-            background-color: #ffffff;
+            line-height: 1.8;
+            color: #3a3a3a;
+            background-color: #fafafa;
         }
 
         /* Typography */
-        h1, h2, h3 {
+        h1, h2, h3, h4 {
             font-family: 'Lora', serif;
-            font-weight: 600;
-            line-height: 1.2;
+            font-weight: 700;
+            line-height: 1.3;
+            color: #1a1a1a;
         }
 
         h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
+            font-size: 3.5rem;
+            margin-bottom: 0.8rem;
+            letter-spacing: -0.5px;
         }
 
         h2 {
-            font-size: 2.2rem;
-            margin-bottom: 2rem;
-            color: #008B8B;
-        }
-
-        h3 {
-            font-size: 1.3rem;
-            margin-bottom: 1rem;
+            font-size: 2.8rem;
+            margin-bottom: 1.5rem;
             color: #2c2c2c;
         }
 
-        p {
-            font-size: 1rem;
-            line-height: 1.8;
-            color: #555;
+        h3 {
+            font-size: 1.4rem;
             margin-bottom: 1rem;
         }
 
+        h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.8rem;
+        }
+
+        p {
+            font-size: 1.05rem;
+            line-height: 1.9;
+            color: #4a4a4a;
+            margin-bottom: 1.2rem;
+        }
+
         a {
-            color: #008B8B;
+            color: #0d9488;
             text-decoration: none;
             transition: color 0.3s ease;
         }
 
         a:hover {
-            color: #20B2AA;
+            color: #14b8a6;
         }
 
         .container {
-            max-width: 1100px;
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 0 40px;
+            padding: 0 50px;
         }
 
         /* Header & Navigation */
         header {
             background-color: #ffffff;
-            padding: 1.5rem 0;
+            padding: 1.8rem 0;
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
-            border-bottom: 1px solid #f0f0f0;
+            border-bottom: 1px solid #e8e8e8;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
         }
 
         .header-content {
@@ -93,53 +100,60 @@
         .logo-container {
             display: flex;
             align-items: center;
-            gap: 0.8rem;
+            gap: 1rem;
+            cursor: pointer;
         }
 
-        .logo-image {
-            width: 40px;
-            height: 40px;
+        .logo-circle {
+            width: 45px;
+            height: 45px;
             border-radius: 50%;
-            object-fit: cover;
-            background-color: #008B8B;
+            background: linear-gradient(135deg, #0d9488 0%, #14b8a6 100%);
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
-            font-weight: bold;
-            font-size: 1.2rem;
+            font-weight: 700;
+            font-size: 1.3rem;
+            font-family: 'Lora', serif;
         }
 
         .logo-text {
             font-family: 'Lora', serif;
-            font-size: 1.4rem;
-            font-weight: 600;
-            color: #008B8B;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            letter-spacing: -0.3px;
         }
 
         nav ul {
             list-style: none;
             display: flex;
-            gap: 3rem;
+            gap: 2.5rem;
         }
 
         nav a {
             font-size: 0.95rem;
             font-weight: 500;
-            color: #2c2c2c;
+            color: #3a3a3a;
             text-decoration: none;
             position: relative;
+            transition: color 0.3s ease;
         }
 
         nav a:after {
             content: '';
             position: absolute;
-            bottom: -5px;
+            bottom: -6px;
             left: 0;
             width: 0;
             height: 2px;
-            background-color: #008B8B;
+            background-color: #0d9488;
             transition: width 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #0d9488;
         }
 
         nav a:hover:after {
@@ -148,77 +162,103 @@
 
         /* Hero Section */
         .hero {
-            margin-top: 100px;
-            padding: 60px 0;
+            margin-top: 120px;
+            padding: 80px 0 100px 0;
+            background: linear-gradient(135deg, rgba(13, 148, 136, 0.05) 0%, rgba(20, 184, 166, 0.03) 100%);
         }
 
         .hero-content {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 5rem;
             align-items: center;
         }
 
-        .hero-text {
-            text-align: left;
-        }
-
         .hero-text h1 {
-            color: #2c2c2c;
+            color: #1a1a1a;
             margin-bottom: 0.5rem;
+            font-size: 3.8rem;
         }
 
-        .hero .tagline {
-            font-size: 1.3rem;
-            color: #008B8B;
-            font-weight: 500;
+        .hero-tagline {
+            font-size: 1.5rem;
+            color: #0d9488;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.3px;
+        }
+
+        .hero-text p {
+            font-size: 1.1rem;
+            color: #4a4a4a;
+            max-width: 550px;
             margin-bottom: 2rem;
+            line-height: 1.9;
         }
 
-        .hero p {
-            font-size: 1.05rem;
-            color: #666;
-            margin-bottom: 2.5rem;
-        }
-
-        .hero-image {
-            text-align: center;
-        }
-
-        .hero-profile-img {
-            width: 350px;
-            height: 350px;
-            border-radius: 50%;
-            object-fit: cover;
-            box-shadow: 0 20px 60px rgba(0, 139, 139, 0.2);
-            display: inline-block;
-            border: 3px solid #f0f0f0;
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
         }
 
         .cta-button {
             display: inline-block;
-            background-color: #008B8B;
+            background-color: #0d9488;
             color: white;
-            padding: 1rem 2.5rem;
-            border-radius: 3px;
+            padding: 1.1rem 2.8rem;
+            border-radius: 6px;
             font-weight: 600;
-            transition: background-color 0.3s ease, transform 0.2s ease;
+            font-size: 1rem;
+            transition: all 0.3s ease;
             text-decoration: none;
+            border: none;
+            cursor: pointer;
         }
 
         .cta-button:hover {
-            background-color: #20B2AA;
-            transform: translateY(-2px);
+            background-color: #0f766e;
+            transform: translateY(-3px);
+            box-shadow: 0 12px 24px rgba(13, 148, 136, 0.25);
+        }
+
+        .cta-button-secondary {
+            background-color: transparent;
+            color: #0d9488;
+            border: 2px solid #0d9488;
+            padding: 0.95rem 2.6rem;
+        }
+
+        .cta-button-secondary:hover {
+            background-color: #0d9488;
+            color: white;
+            box-shadow: 0 12px 24px rgba(13, 148, 136, 0.2);
+        }
+
+        .hero-image {
+            text-align: center;
+            position: relative;
+        }
+
+        .hero-profile-img {
+            width: 100%;
+            max-width: 380px;
+            height: auto;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 30px 60px rgba(13, 148, 136, 0.25);
+            border: 6px solid #ffffff;
         }
 
         /* Sections */
         section {
-            padding: 80px 0;
-            border-bottom: 1px solid #f5f5f5;
+            padding: 100px 0;
+            background-color: #ffffff;
+            border-bottom: none;
         }
 
-        section:last-of-type {
-            border-bottom: none;
+        section:nth-child(odd) {
+            background-color: #fafafa;
         }
 
         /* About Section */
@@ -226,52 +266,88 @@
             background-color: #fafafa;
         }
 
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 3rem;
+        .about-wrapper {
+            max-width: 900px;
+            margin: 0 auto;
         }
 
-        .about-text h2 {
-            margin-top: 0;
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
         }
 
-        .about-text p:last-child {
-            margin-bottom: 0;
-        }
-
-        .about-highlight {
-            background-color: white;
-            padding: 2rem;
-            border-left: 4px solid #008B8B;
-            margin: 2rem 0;
-        }
-
-        .about-highlight h3 {
-            color: #008B8B;
-            margin-top: 0;
-        }
-
-        /* Expertise List */
-        .expertise-list {
-            list-style: none;
-            margin: 2rem 0;
-        }
-
-        .expertise-list li {
-            padding: 0.75rem 0;
-            padding-left: 2rem;
+        .section-header h2 {
             position: relative;
-            color: #555;
+            display: inline-block;
+            margin-bottom: 1rem;
         }
 
-        .expertise-list li:before {
-            content: "✓";
+        .section-header h2:after {
+            content: '';
             position: absolute;
-            left: 0;
-            color: #008B8B;
-            font-weight: bold;
+            bottom: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background-color: #0d9488;
+            border-radius: 2px;
+        }
+
+        .about-text {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .about-text p {
             font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            color: #4a4a4a;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(13, 148, 136, 0.08) 0%, rgba(20, 184, 166, 0.04) 100%);
+            padding: 3rem;
+            border-radius: 12px;
+            margin-top: 3rem;
+            border-left: 5px solid #0d9488;
+        }
+
+        .highlight-box h3 {
+            color: #0d9488;
+            margin-bottom: 1.5rem;
+        }
+
+        .expertise-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .expertise-item {
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+
+        .expertise-icon {
+            width: 30px;
+            height: 30px;
+            min-width: 30px;
+            border-radius: 50%;
+            background-color: #0d9488;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            margin-top: 0.2rem;
+        }
+
+        .expertise-item p {
+            margin-bottom: 0;
+            font-size: 1rem;
         }
 
         /* Portfolio Section */
@@ -282,33 +358,38 @@
         .portfolio-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
+            gap: 2.5rem;
+            margin-top: 3rem;
         }
 
         .portfolio-item {
-            background-color: #fafafa;
-            padding: 2rem;
-            border-radius: 3px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background-color: #ffffff;
+            padding: 2.5rem;
+            border-radius: 12px;
+            border: 2px solid #e8e8e8;
+            transition: all 0.3s ease;
+            text-align: center;
         }
 
         .portfolio-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 20px rgba(0, 139, 139, 0.1);
+            transform: translateY(-8px);
+            border-color: #0d9488;
+            box-shadow: 0 20px 40px rgba(13, 148, 136, 0.15);
         }
 
         .portfolio-icon {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
         }
 
         .portfolio-item h3 {
-            margin-bottom: 0.75rem;
+            margin-bottom: 1rem;
+            color: #1a1a1a;
         }
 
         .portfolio-item p {
-            font-size: 0.95rem;
-            color: #666;
+            font-size: 1rem;
+            color: #4a4a4a;
             margin-bottom: 0;
         }
 
@@ -323,26 +404,40 @@
             margin: 0 auto 3rem;
         }
 
+        .services-intro p {
+            font-size: 1.1rem;
+            color: #4a4a4a;
+        }
+
         .services-list {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2.5rem;
+            margin-top: 3rem;
         }
 
         .service-item {
-            background-color: white;
-            padding: 2rem;
-            border-radius: 3px;
-            border-top: 3px solid #008B8B;
+            background-color: #ffffff;
+            padding: 2.5rem;
+            border-radius: 12px;
+            border-top: 4px solid #0d9488;
+            transition: all 0.3s ease;
+        }
+
+        .service-item:hover {
+            box-shadow: 0 15px 35px rgba(13, 148, 136, 0.1);
         }
 
         .service-item h3 {
             margin-top: 0;
+            margin-bottom: 1rem;
+            color: #1a1a1a;
         }
 
         .service-item p {
-            color: #666;
+            color: #4a4a4a;
             margin-bottom: 0;
+            font-size: 1rem;
         }
 
         /* Contact Section */
@@ -352,6 +447,8 @@
 
         .contact-wrapper {
             text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
         }
 
         .contact-wrapper h2 {
@@ -359,18 +456,18 @@
         }
 
         .contact-intro {
-            font-size: 1.05rem;
-            color: #666;
+            font-size: 1.1rem;
+            color: #4a4a4a;
             max-width: 600px;
-            margin: 0 auto 2.5rem;
+            margin: 0 auto 3rem;
         }
 
         .contact-links {
             display: flex;
             justify-content: center;
-            gap: 3rem;
+            gap: 4rem;
             flex-wrap: wrap;
-            margin-bottom: 2rem;
+            margin-bottom: 3rem;
         }
 
         .contact-link {
@@ -380,42 +477,72 @@
         }
 
         .contact-link label {
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             color: #999;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.8rem;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            font-weight: 600;
+            letter-spacing: 1.5px;
+            font-weight: 700;
         }
 
         .contact-link a {
-            font-size: 1.1rem;
+            font-size: 1.15rem;
             font-weight: 600;
-            color: #008B8B;
+            color: #0d9488;
+        }
+
+        .contact-link a:hover {
+            text-decoration: underline;
         }
 
         /* Footer */
         footer {
-            background-color: #2c2c2c;
+            background-color: #1a1a1a;
             color: #fff;
             text-align: center;
-            padding: 2rem;
-            font-size: 0.9rem;
+            padding: 3rem 2rem;
+            font-size: 0.95rem;
         }
 
         footer p {
-            color: #ccc;
-            margin: 0.5rem 0;
+            color: #bbb;
+            margin: 0.8rem 0;
         }
 
         /* Responsive */
-        @media (max-width: 768px) {
+        @media (max-width: 1024px) {
             .container {
-                padding: 0 20px;
+                padding: 0 40px;
             }
 
             h1 {
-                font-size: 2rem;
+                font-size: 3rem;
+            }
+
+            h2 {
+                font-size: 2.3rem;
+            }
+
+            .hero-content {
+                gap: 3rem;
+            }
+
+            .portfolio-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .expertise-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 25px;
+            }
+
+            h1 {
+                font-size: 2.2rem;
             }
 
             h2 {
@@ -428,7 +555,8 @@
             }
 
             .hero {
-                padding: 40px 0;
+                margin-top: 100px;
+                padding: 50px 0 60px 0;
             }
 
             .hero-content {
@@ -437,20 +565,20 @@
             }
 
             .hero-text h1 {
-                font-size: 2rem;
+                font-size: 2.2rem;
             }
 
-            .hero .tagline {
-                font-size: 1.1rem;
+            .hero-tagline {
+                font-size: 1.2rem;
             }
 
             .hero-profile-img {
-                width: 280px;
-                height: 280px;
+                max-width: 280px;
             }
 
             .portfolio-grid {
                 grid-template-columns: 1fr;
+                gap: 2rem;
             }
 
             .services-list {
@@ -463,21 +591,26 @@
             }
 
             section {
-                padding: 50px 0;
+                padding: 60px 0;
             }
 
-            nav {
-                font-size: 0.85rem;
+            .cta-buttons {
+                flex-direction: column;
+                align-items: flex-start;
             }
 
-            .logo-text {
-                display: none;
+            .highlight-box {
+                padding: 2rem;
             }
         }
 
         @media (max-width: 480px) {
             header {
-                padding: 1rem 0;
+                padding: 1.2rem 0;
+            }
+
+            .container {
+                padding: 0 20px;
             }
 
             .header-content {
@@ -492,7 +625,7 @@
             }
 
             h1 {
-                font-size: 1.5rem;
+                font-size: 1.8rem;
             }
 
             h2 {
@@ -500,17 +633,30 @@
             }
 
             .cta-button {
-                padding: 0.85rem 1.8rem;
-                font-size: 0.9rem;
+                padding: 0.95rem 2rem;
+                font-size: 0.95rem;
+                width: 100%;
+                text-align: center;
             }
 
             .hero-profile-img {
-                width: 220px;
-                height: 220px;
+                max-width: 220px;
             }
 
             .logo-text {
                 display: none;
+            }
+
+            .hero-text p {
+                font-size: 1rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+
+            .contact-links {
+                gap: 1.5rem;
             }
         }
     </style>
@@ -521,8 +667,8 @@
         <div class="container">
             <div class="header-content">
                 <div class="logo-container">
-                    <div class="logo-image">K</div>
-                    <div class="logo-text">Kiranmai M</div>
+                    <div class="logo-circle">K</div>
+                    <div class="logo-text">Kiranmai</div>
                 </div>
                 <nav>
                     <ul>
@@ -543,12 +689,15 @@
             <div class="hero-content">
                 <div class="hero-text">
                     <h1>Kiranmai Reddy</h1>
-                    <p class="tagline">Health & Medical Content Writer</p>
+                    <p class="hero-tagline">Health & Medical Content Writer</p>
                     <p>
-                        I create evidence-based health, medical, and wellness content that educates readers, 
-                        builds trust, and makes complex topics easy to understand.
+                        I create clear, evidence-based content about health and wellness that people actually want to read. 
+                        Whether it's medical articles, wellness guides, or patient education materials—I make complex topics accessible and engaging.
                     </p>
-                    <a href="#contact" class="cta-button">Let's Work Together</a>
+                    <div class="cta-buttons">
+                        <a href="#contact" class="cta-button">Let's Work Together</a>
+                        <a href="#portfolio" class="cta-button cta-button-secondary">See My Work</a>
+                    </div>
                 </div>
                 <div class="hero-image">
                     <img src="profile.jpg" alt="Kiranmai Reddy - Health & Medical Content Writer" class="hero-profile-img">
@@ -560,27 +709,41 @@
     <!-- About Section -->
     <section id="about">
         <div class="container">
-            <div class="about-content">
-                <div class="about-text">
+            <div class="about-wrapper">
+                <div class="section-header">
                     <h2>About Me</h2>
-                    <p>
-                        I'm a health and medical content writer with a dental graduate background and strong foundation in medical science. 
-                        I specialize in translating complex medical concepts into clear, accessible content that readers can trust and understand.
-                    </p>
-                    <p>
-                        My approach combines rigorous research with reader-focused writing. Whether you need wellness articles, 
-                        medical education content, or health-focused copy, I deliver work that's both scientifically accurate and genuinely engaging.
-                    </p>
+                </div>
 
-                    <div class="about-highlight">
-                        <h3>Why Work With Me?</h3>
-                        <ul class="expertise-list">
-                            <li>Dental graduate with strong medical science foundation</li>
-                            <li>Evidence-based, reader-friendly writing</li>
-                            <li>SEO-optimized health content</li>
-                            <li>Experience with wellness and medical topics</li>
-                            <li>Detail-oriented, research-driven approach</li>
-                        </ul>
+                <div class="about-text">
+                    <p>
+                        I'm a health and medical content writer with a dental background and a passion for making health information accessible. 
+                        I've spent years translating medical jargon into clear, reader-friendly language that actually makes sense.
+                    </p>
+                    <p>
+                        My approach? Research-driven storytelling. I dig deep into the science, but I never let the data overshadow the human element. 
+                        Whether you need wellness articles, medical education content, or copy for your healthcare brand, I craft content that informs, engages, and builds trust.
+                    </p>
+                </div>
+
+                <div class="highlight-box">
+                    <h3>What I bring to the table</h3>
+                    <div class="expertise-grid">
+                        <div class="expertise-item">
+                            <div class="expertise-icon">✓</div>
+                            <p><strong>Medical foundation</strong> — Dental degree + strong science background</p>
+                        </div>
+                        <div class="expertise-item">
+                            <div class="expertise-icon">✓</div>
+                            <p><strong>Clear writing</strong> — I make complexity simple</p>
+                        </div>
+                        <div class="expertise-item">
+                            <div class="expertise-icon">✓</div>
+                            <p><strong>SEO savvy</strong> — Content that ranks and reads well</p>
+                        </div>
+                        <div class="expertise-item">
+                            <div class="expertise-icon">✓</div>
+                            <p><strong>Reader-focused</strong> — Always thinking about your audience</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -590,14 +753,17 @@
     <!-- Portfolio Section -->
     <section id="portfolio">
         <div class="container">
-            <h2>Featured Work</h2>
+            <div class="section-header">
+                <h2>What I Write</h2>
+            </div>
+
             <div class="portfolio-grid">
                 <div class="portfolio-item">
                     <div class="portfolio-icon">📚</div>
                     <h3>Health & Wellness Articles</h3>
                     <p>
-                        In-depth, SEO-optimized articles on nutrition, preventive health, wellness trends, and lifestyle optimization. 
-                        Perfect for health blogs, magazines, and websites.
+                        In-depth, SEO-friendly articles on nutrition, fitness, mental health, disease prevention, and lifestyle. 
+                        Perfect for health blogs, magazines, and websites looking for authoritative content.
                     </p>
                 </div>
 
@@ -605,17 +771,17 @@
                     <div class="portfolio-icon">🏥</div>
                     <h3>Medical Education Content</h3>
                     <p>
-                        Patient-friendly educational materials and medical articles that explain conditions, treatments, 
-                        and health concepts with clarity and compassion.
+                        Patient-friendly guides that explain conditions, treatments, and medical concepts with clarity. 
+                        I translate clinical information into content people understand and trust.
                     </p>
                 </div>
 
                 <div class="portfolio-item">
-                    <div class="portfolio-icon">💊</div>
-                    <h3>Healthcare Copywriting</h3>
+                    <div class="portfolio-icon">✍️</div>
+                    <h3>Healthcare Brand Content</h3>
                     <p>
-                        Website copy, email campaigns, and promotional content for healthcare brands and medical practices. 
-                        Professional, accurate, and conversion-focused.
+                        Website copy, email campaigns, and marketing materials for healthcare providers and wellness brands. 
+                        Professional, credible, and conversion-focused.
                     </p>
                 </div>
             </div>
@@ -625,10 +791,14 @@
     <!-- Services Section -->
     <section id="services">
         <div class="container">
-            <h2>Services</h2>
+            <div class="section-header">
+                <h2>Services</h2>
+            </div>
+
             <div class="services-intro">
                 <p>
-                    I offer a range of content writing services tailored to your health, wellness, and medical communication needs.
+                    I work with healthcare brands, clinics, wellness platforms, and publications to deliver health content that's 
+                    scientifically accurate, reader-engaging, and perfectly tailored to your audience.
                 </p>
             </div>
 
@@ -636,32 +806,32 @@
                 <div class="service-item">
                     <h3>Health & Wellness Articles</h3>
                     <p>
-                        SEO-optimized articles on health topics, nutrition, fitness, mental wellness, disease prevention, 
-                        and lifestyle improvement. Research-backed and reader-focused.
+                        SEO-optimized articles covering nutrition, fitness, mental health, wellness trends, and lifestyle. 
+                        I research thoroughly and write in a way that's both informative and engaging.
                     </p>
                 </div>
 
                 <div class="service-item">
                     <h3>Medical Content Writing</h3>
                     <p>
-                        Professional medical articles, condition guides, treatment overviews, and healthcare blog posts 
-                        that combine scientific accuracy with accessible language.
+                        Professional medical articles, condition guides, treatment overviews, and healthcare blog posts. 
+                        Scientifically accurate, accessible language, and perfectly suited for patient education.
                     </p>
                 </div>
 
                 <div class="service-item">
                     <h3>Patient Education Materials</h3>
                     <p>
-                        Clear, compassionate content that helps patients understand their health, conditions, and treatment options. 
-                        Designed to empower informed decision-making.
+                        Clear, compassionate content that helps patients understand their health and make informed decisions. 
+                        From condition explainers to treatment guides—I keep your patients informed and empowered.
                     </p>
                 </div>
 
                 <div class="service-item">
-                    <h3>Healthcare Marketing Copy</h3>
+                    <h3>Healthcare Brand Copy</h3>
                     <p>
-                        Website content, email campaigns, and promotional materials for healthcare providers, wellness brands, 
-                        and medical practices. Combining credibility with compelling messaging.
+                        Website content, email campaigns, social media, and promotional materials for healthcare businesses. 
+                        Combining credibility with compelling messaging that actually converts.
                     </p>
                 </div>
             </div>
@@ -672,10 +842,10 @@
     <section id="contact">
         <div class="container">
             <div class="contact-wrapper">
-                <h2>Let's Connect</h2>
+                <h2>Let's Create Something Great</h2>
                 <p class="contact-intro">
-                    I'm available for freelance writing projects, content collaborations, and healthcare communications work. 
-                    Reach out to discuss your next project.
+                    I'm always interested in working with healthcare brands, publications, and clinics on content that makes a difference. 
+                    Let's chat about your project.
                 </p>
 
                 <div class="contact-links">
@@ -687,12 +857,12 @@
                     <div class="contact-link">
                         <label>LinkedIn</label>
                         <a href="https://linkedin.com/in/dr-kiranmai-reddy-a89359152" target="_blank">
-                            dr-kiranmai-reddy-a89359152
+                            Connect with me
                         </a>
                     </div>
                 </div>
 
-                <a href="mailto:kiranmaireddy960@gmail.com" class="cta-button">Start a Project</a>
+                <a href="mailto:kiranmaireddy960@gmail.com" class="cta-button">Start a Conversation</a>
             </div>
         </div>
     </section>
@@ -700,7 +870,7 @@
     <!-- Footer -->
     <footer>
         <p>&copy; 2024 Kiranmai M. All rights reserved.</p>
-        <p>Health & Medical Content Writer</p>
+        <p>Health & Medical Content Writer based in India</p>
     </footer>
 </body>
 </html>
